@@ -1,8 +1,9 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Karoll Beauty</title>
   <style>
     body {
@@ -10,11 +11,11 @@
       font-family: 'Segoe UI', sans-serif;
       background: url('fondo-maquillaje.png') no-repeat center center fixed;
       background-size: cover;
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      height: 100vh;
       text-align: center;
     }
     h1 {
@@ -22,13 +23,12 @@
       background-color: rgba(255, 255, 255, 0.8);
       padding: 10px 20px;
       border-radius: 10px;
-      margin-bottom: 30px;
     }
     .button {
       background-color: rgba(196, 75, 118, 0.9);
       color: white;
-      padding: 15px 30px;
-      margin: 10px;
+      padding: 20px 40px;
+      margin: 20px;
       font-size: 1.2rem;
       border: none;
       border-radius: 10px;
@@ -39,8 +39,32 @@
     .button:hover {
       background-color: #a8385f;
     }
-    .hidden {
-      display: none;
+  </style>
+</head>
+<body>
+  <h1>Karoll Beauty</h1>
+</body>
+</html>
+
+<!-- social.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maquillaje Social</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('fondo-maquillaje.png') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
     }
     img {
       max-width: 90%;
@@ -48,33 +72,71 @@
       border-radius: 10px;
       margin-bottom: 20px;
     }
+    .button {
+      background-color: rgba(196, 75, 118, 0.9);
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: #a8385f;
+    }
   </style>
 </head>
 <body>
-  <div id="main">
-    <h1>Karoll Beauty</h1>
-    <button class="button" onclick="showImage('1.png')">Maquillaje Social</button>
-    <button class="button" onclick="showImage('2.png')">Maquillaje Full Glam</button>
-  </div>
+  <img src="1.png" alt="Maquillaje Social">
+  <a href="index.html" class="button">Volver al inicio</a>
+</body>
+</html>
 
-  <div id="viewer" class="hidden">
-    <img id="displayImage" src="" alt="Maquillaje">
-    <br>
-    <button class="button" onclick="goBack()">Volver al inicio</button>
-  </div>
-
-  <script>
-    function showImage(imagePath) {
-      document.getElementById('displayImage').src = imagePath;
-      document.getElementById('main').classList.add('hidden');
-      document.getElementById('viewer').classList.remove('hidden');
+<!-- fullglam.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maquillaje Full Glam</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('fondo-maquillaje.png') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
     }
-
-    function goBack() {
-      document.getElementById('viewer').classList.add('hidden');
-      document.getElementById('main').classList.remove('hidden');
+    img {
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 10px;
+      margin-bottom: 20px;
     }
-  </script>
+    .button {
+      background-color: rgba(196, 75, 118, 0.9);
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: #a8385f;
+    }
+  </style>
+</head>
+<body>
+  <img src="2.png" alt="Maquillaje Full Glam">
+  <a href="index.html" class="button">Volver al inicio</a>
 </body>
 </html>
 
