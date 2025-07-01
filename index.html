@@ -10,11 +10,11 @@
       font-family: 'Segoe UI', sans-serif;
       background: url('fondo-maquillaje.png') no-repeat center center fixed;
       background-size: cover;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
       text-align: center;
     }
     h1 {
@@ -22,12 +22,13 @@
       background-color: rgba(255, 255, 255, 0.8);
       padding: 10px 20px;
       border-radius: 10px;
+      margin-bottom: 30px;
     }
     .button {
       background-color: rgba(196, 75, 118, 0.9);
       color: white;
-      padding: 20px 40px;
-      margin: 20px;
+      padding: 15px 30px;
+      margin: 10px;
       font-size: 1.2rem;
       border: none;
       border-radius: 10px;
@@ -38,14 +39,45 @@
     .button:hover {
       background-color: #a8385f;
     }
+    .hidden {
+      display: none;
+    }
+    img {
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 <body>
-  <h1>Karoll Beauty</h1>
-  <a href="social.html" class="button">Maquillaje Social</a>
-  <a href="fullglam.html" class="button">Maquillaje Full Glam</a>
+  <div id="main">
+    <h1>Karoll Beauty</h1>
+    <button class="button" onclick="showImage('1.png')">Maquillaje Social</button>
+    <button class="button" onclick="showImage('2.png')">Maquillaje Full Glam</button>
+  </div>
+
+  <div id="viewer" class="hidden">
+    <img id="displayImage" src="" alt="Maquillaje">
+    <br>
+    <button class="button" onclick="goBack()">Volver al inicio</button>
+  </div>
+
+  <script>
+    function showImage(imagePath) {
+      document.getElementById('displayImage').src = imagePath;
+      document.getElementById('main').classList.add('hidden');
+      document.getElementById('viewer').classList.remove('hidden');
+    }
+
+    function goBack() {
+      document.getElementById('viewer').classList.add('hidden');
+      document.getElementById('main').classList.remove('hidden');
+    }
+  </script>
 </body>
 </html>
+
 
 
 
