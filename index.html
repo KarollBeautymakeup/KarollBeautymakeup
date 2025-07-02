@@ -8,14 +8,25 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: url('fondo-maquillaje.png') no-repeat center center fixed;
-      background-size: cover;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
+    }
+    #home {
+      background: url('fondo-maquillaje.png') no-repeat center center fixed;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
     h1 {
       color: #c44b76;
@@ -27,7 +38,7 @@
       background-color: rgba(196, 75, 118, 0.9);
       color: white;
       padding: 15px 30px;
-      margin: 10px;
+      margin: 10px 0;
       font-size: 1.2rem;
       border: none;
       border-radius: 10px;
@@ -40,6 +51,13 @@
     }
     .hidden {
       display: none;
+    }
+    #imageView {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 10px;
     }
     img {
       max-width: 90%;
@@ -58,7 +76,7 @@
   </div>
 
   <!-- Vista de imagen -->
-  <div id="imageView" class="hidden">
+  <div id="imageView">
     <img id="mainImage" src="" alt="Imagen de maquillaje">
     <br>
     <button class="button" onclick="goBack()">Volver al inicio</button>
@@ -82,6 +100,7 @@
   </script>
 </body>
 </html>
+
 
 
 
